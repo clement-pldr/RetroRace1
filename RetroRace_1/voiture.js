@@ -8,9 +8,6 @@ const MOVE = {
     TOPRIGHT: 5,
     /*Rajouter par clem ***********/
 }
-let game = {
-    gametick: 0
-}
 class player {
     constructor() {
         this.x = window.innerWidth / 2;
@@ -158,10 +155,6 @@ document.onkeydown = keydown;
 document.onkeyup = onkeyup;
 
 function mainUpdate(listKeyDown){
-
-    game.gametick++;
-    console.log(game.gametick);
-
     if(listKeyDown.indexOf("w")!=-1){
         voiture.move(MOVE.UP);
     }
